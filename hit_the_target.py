@@ -1,5 +1,7 @@
 import turtle
 
+from colorama import Fore
+
 # Именованные константы
 SCREEN_WIDH = 600
 SCREEN_HEIGHT = 600
@@ -60,5 +62,16 @@ if (turtle.xcor() >=TARGET_LEFT_X and
         print('Цель поражена!')
 else:
     print('Вы промахнулись.')
+    
+    if force > 10:
+        print('Примените силу поменьше')
+    elif force < 9.2:
+        print('Примените силу побольше')
+    if angle < 66:
+        print('Попробуйте угол побольше')
+    elif angle > 66:
+        print('Попробуйте угол поменьше')
+     
+
     
 turtle.done()
