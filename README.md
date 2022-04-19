@@ -1,2 +1,4 @@
 # python_projects
-Here are all test python files
+
+solutions of book 'start out with python' by Tony Gaddis
+only programming exercises of each chapoter
