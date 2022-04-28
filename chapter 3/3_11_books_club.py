@@ -1,7 +1,5 @@
  #Очки книжного клуба
 
-from email import message
-
 
 books_count = int(input('Enter amount of books per month: '))
 

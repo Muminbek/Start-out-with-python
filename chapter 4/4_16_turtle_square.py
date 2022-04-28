@@ -12,7 +12,7 @@ turtle.left(angle)
 for square in range(100):
     
     for yin in range(4):
-        r  = turtle.forward(side)
+        turtle.forward(side)
         turtle.left(angle)
     
     side += 5

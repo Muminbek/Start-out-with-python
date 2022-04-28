@@ -1,6 +1,6 @@
 #population
 
-population = int(input('Enter the population of organisms: '))
+population = float(input('Enter the population of organisms: '))
 increasing_per_day = float(input('Enter increasing population percantage per day: '))
 amount_day = int(input('Enter amount of days: '))
 increasing_per_day = increasing_per_day / 100

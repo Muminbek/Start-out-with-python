@@ -1,6 +1,6 @@
 # tuition increase
 
-tuition = 45000
+tuition: float = 45000
 
 increase_rate = 0.03
 

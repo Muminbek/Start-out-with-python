@@ -1,7 +1,7 @@
 
 budget_per_month = float(input('Enter the budget per month: '))
 
-total_expense = 0
+total_expense: float = 0
 keep_going = 'y'
 counter = 0
 while keep_going == 'y' or keep_going == 'Y':

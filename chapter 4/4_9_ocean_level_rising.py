@@ -1,7 +1,7 @@
 
 
-level_up = 1.6
-total_up = 0
+level_up: float = 1.6
+total_up: float = 0
 
 
 print('Years\t\tRising level in mm')

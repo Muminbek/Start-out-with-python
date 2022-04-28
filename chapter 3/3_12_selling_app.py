@@ -10,19 +10,19 @@ else:
     message = 'You bought pakcages for $'
     
     if amount_packages >= 10 and amount_packages >= 19:
-        discount: int = total_summ * 0.1
+        discount = total_summ * 0.1
         final_summ = total_summ - discount
         message += f'{final_summ} with ${discount} discount'
     elif amount_packages >= 20 and amount_packages >= 49:
-        discount: int = total_summ * 0.2
+        discount = total_summ * 0.2
         final_summ = total_summ - discount
         message += f'{final_summ} dollars with ${discount} discount'
     elif amount_packages >= 50 and amount_packages >= 99:
-        discount: int = total_summ * 0.3
+        discount = total_summ * 0.3
         final_summ = total_summ - discount
         message += f'{final_summ} dollars with ${discount} discount'
     elif amount_packages >= 100:
-        discount: int = total_summ * 0.4
+        discount = total_summ * 0.4
         final_summ = total_summ - discount
         message += f'{final_summ} dollars with ${discount} discount'    
     
