@@ -2,8 +2,6 @@
 
 import random
 
-from numpy import False_
-
 def main():
     print('Possible option are:')
     print('1) Rock')
