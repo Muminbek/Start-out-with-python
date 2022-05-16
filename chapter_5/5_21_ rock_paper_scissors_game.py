@@ -10,13 +10,15 @@ def main():
     
     status = True
     while status == True:
-        user_choice = int(input('\nPlease enter choice as number: '))
-        computer_chose = computer_choice()
-        show_result_user(user_choice)
-        show_result_computer(computer_chose)
-        print()
-        status = who_win(user_choice, computer_chose)
-        
+        try:
+            user_choice = int(input('\nPlease enter choice as number: '))
+            computer_chose = computer_choice()
+            show_result_user(user_choice)
+            show_result_computer(computer_chose)
+            print()
+            status = who_win(user_choice, computer_chose)
+        except ValueError:
+            print('Error value, enter number')
 def computer_choice():
     return random.randint(1, 3)
 
