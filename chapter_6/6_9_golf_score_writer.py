@@ -1,6 +1,4 @@
 # Programm to write players name and their scores
-from decimal import InvalidOperation
-
 
 def main():
     
