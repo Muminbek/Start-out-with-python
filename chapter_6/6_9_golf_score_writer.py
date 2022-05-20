@@ -1,4 +1,4 @@
-# Programm to write players name and their scores
+# Programm to write players names and their scores
 
 def main():
     
