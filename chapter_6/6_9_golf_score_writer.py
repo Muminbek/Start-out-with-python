@@ -33,7 +33,7 @@ def writer():
             golf_file.write(f'{scores} \n')
             print('Success!')
             user_choice = input('Please enter "y" to continue or any button to return menu: ')
-            if user_choice != 'y':
+            if user_choice.upper() != 'Y':
                 status = False
         except Exception as err:
             print(err)
