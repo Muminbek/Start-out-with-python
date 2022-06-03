@@ -1,14 +1,14 @@
 # Gas Prices
 
 def main():
-    with open('/home/mrabi/workspace/GasPrices.txt', 'r') as infile:
+    with open('GasPrices.txt', 'r') as infile:
         infile_list = infile.read().splitlines()
         date_list = []
         price_lists = []
         for line in infile_list:
             date_list.append(line[0:10])
             price_lists.append(line[11:])
-        #price_list2 = price_lists[:]
+        
         
     average_price_per_year(date_list, price_lists)
     average_price_per_month(date_list,price_lists)
