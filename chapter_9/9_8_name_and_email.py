@@ -2,41 +2,38 @@
 import pickle
 
 def main():
-    try:
-        with open('name_email.dat', 'rb') as infile:
-            emails = pickle.load(infile)
-        again = 'y'
-        status = False
-        while again.lower() == 'y':
-            user_choice = Display()
-            if user_choice == 1:
-                AddNewName(emails)
-                status = True
-            elif user_choice == 2:
-                Change(emails)
-                status = True
-            elif user_choice == 3:
-                Delete(emails)
-                status = True
-            elif user_choice == 4:
-                ShowDataFor(emails)
-            elif user_choice == 5:
-                break
-            else:
-                print("You entered an invalid option.\n")
-            again = input("\nYou want to continue? (y or n): ")
+    emails = load_file()
+    again = 'y'
 
-        if status:
-            FileDumping(emails)
+    while again.lower() == 'y':
+        user_choice = get_choice()
+        if user_choice == 1:
+            AddNewName(emails)
+        elif user_choice == 2:
+            Change(emails)
+        elif user_choice == 3:
+            Delete(emails)
+        elif user_choice == 4:
+            ShowDataFor(emails)
+        elif user_choice == 5:
+            break
+        else:
+            print("You entered an invalid option.\n")
+        again = input("\nYou want to continue? (y or n): ")
+
+        save_file(emails)
         print('\nEXITED')
 
-    except FileNotFoundError:
-        print("OOPSS! There is no file <<<name_email>>>. Lets create the file and enter one registry.")
-        emails = {}
-        AddNewName(emails)
-        FileDumping(emails)
+def load_file():
+    try:
+        with open('name_email.dat', 'rb') as infile:
+            dict = pickle.load(infile)
 
-def Display():
+    except FileNotFoundError:
+        dict = {}
+    return dict
+
+def get_choice():
     print()
     print("MENU")
     print("1: Add a new name and email address")
@@ -50,9 +47,9 @@ def Display():
         return user_choice
     except ValueError:
         print('Please enter a choice among the menu (1,2,3,4,5)')
-        Display()
+        get_choice()
 
-def FileDumping(emails):
+def save_file(emails):
         with open('name_email.dat', 'wb') as infile:
             pickle.dump(emails, infile)
     
