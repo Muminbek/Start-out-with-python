@@ -1,5 +1,3 @@
-from cmath import inf
-
 
 def main():
     infile = open('main.html', 'w')
